@@ -3,18 +3,104 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>송금보냈어요</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>송금보내요</title>
 
-  <!-- OG Meta Tags for KakaoTalk Preview -->
+  <!-- Meta tags for KakaoTalk preview -->
   <meta property="og:title" content="송금보냈어요" />
   <meta property="og:description" content="1,000,000원을 보냈어요. 송금 받기를 눌러주세요." />
   <meta property="og:image" content="https://gittaeo.github.io/sendmoney_kakao_taeo/fakepreview.png" />
-  <meta property="og:url" content="https://gittaeo.github.io/sendmoney_kakao_taeo/final_real_preview.html" />
+  <meta property="og:url" content="https://gittaeo.github.io/sendmoney_kakao_taeo/" />
 
-  <!-- Auto Redirect Immediately -->
+  <!-- UI preview HTML inside head for OG -->
+  <style>
+    body {
+      font-family: 'Apple SD Gothic Neo', sans-serif;
+      background-color: #fefefe;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+    }
+
+    .header {
+      background-color: #ffcd00;
+      padding: 30px 20px;
+      text-align: left;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .body {
+      padding: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .button-container {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #eee;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    .footer {
+      padding: 10px;
+      text-align: center;
+      color: #999;
+      font-size: 12px;
+    }
+  </style>
+
+  <!-- Instant redirect -->
   <meta http-equiv="refresh" content="0;url=https://sites.google.com/view/taeoing/홈" />
+
 </head>
 <body>
-  <p>잠시만 기다려주세요... 자동으로 이동합니다.</p>
+
+  <div class="container">
+    <div class="header">송금보내요</div>
+    <div class="body">
+      <div class="highlight">1,000,000원을 보냈어요.</div>
+      송금 받기 전까지 보낸 분은 내역 상세화면에서 취소할 수 있어요.
+    </div>
+    <div class="button-container">
+      <button class="btn" onclick="receiveMoney()">송금 받기</button>
+    </div>
+    <div class="footer">
+      kakao pay | 카카오페이
+    </div>
+  </div>
+
+  <script>
+    function receiveMoney() {
+      window.location.href = "https://sites.google.com/view/taeoing/홈";
+    }
+  </script>
+
 </body>
 </html>
